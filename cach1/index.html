@@ -66,5 +66,17 @@
         <button class="form-submit">Đăng ký</button>
       </form>
     </div>
+
+    <script src="main.js"></script>
+    <script>
+      Validator({
+        form: '#form-1',
+        errSelector: '.form-message',
+        rules: [
+          Validator.isRequired('#fullname'),
+          Validator.isEmail('#email')
+        ]
+      });
+    </script>
   </body>
 </html>
